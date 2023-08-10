@@ -19,14 +19,14 @@ jobs:
       - name: Deploy App(Deployment)
         uses: actions-hub/kubectl@master
         with: 
-          args: apply -f kubernetes/deployment.yml
+          args: apply -f k8s/nginx-deploy.yml
 
       - name: Deploy App(Deployment)
         uses: actions-hub/kubectl@master
         with: 
-          args: apply -f kubernetes/service.yml 
+          args: apply -f k8s/nginx-service.yml
 
       - name: Deploy App(Deployment)
         uses: actions-hub/kubectl@master
         with: 
-          args: apply -f kubernetes/ingress.yml       
+          args: apply -f k8s/nginx-ingress.yml       
